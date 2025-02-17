@@ -10,3 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+.theme_dark .decorated-zon__rec-decoration {
+  display: block;
+}
