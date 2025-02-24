@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  padding: var(--main-indent);
+  padding-inline: var(--main-indent);
   font-family: var(--main-font);
   font-size: var(--main-font-size);
   background-color: var(--background-color);
@@ -13,6 +13,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-block-size: 668px;
+  block-size: 100vh;
 }
 
 .decorated-zone {
@@ -27,7 +29,7 @@
   content: "";
   inline-size: 25px;
   block-size: 25px;
-  inset-block-end: 0px;
+  inset-block-end: var(--main-indent);
   inset-inline-start: 0px;
   border-block-end: 1px solid var(--decoration-zone-border);
   border-inline-start: 1px solid var(--decoration-zone-border);
@@ -39,7 +41,7 @@
   inline-size: 25px;
   block-size: 25px;
   inset-inline-end: 0px;
-  inset-block-start: 0px;
+  inset-block-start: var(--main-indent);
   border-block-start: 1px solid var(--decoration-zone-border);
   border-inline-end: 1px solid var(--decoration-zone-border);
 }
@@ -70,7 +72,6 @@
 .header__theme-menu {
   justify-self: end;
   align-self: center;
-  padding-block: 65px;
 }
 
 .header__theme-menu-list {
@@ -143,6 +144,10 @@
   background-color: var(--accent-color);
 }
 
+.question-how .question__subtitle{
+  font-weight: normal;
+}
+
 .question__text {
   padding-block-start: 10px;
   color: var(--main-text-color);
@@ -156,6 +161,10 @@
 }
 
 .question__link:hover {
+  border-block-end: 1px solid currentColor;
+}
+
+.question__link:focus-visible {
   outline: 1px solid currentColor;
 }
 
@@ -179,9 +188,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--main-indent);
   inline-size: 100%;
   block-size: 100vb;
+  min-block-size: 668px;
 }
 
 .footer__title {
@@ -195,22 +204,31 @@
   :root {
     --main-indent: 20px;
     --section-indent: 80px;
-    --vertical-indent: 40px;
+    --vertical-indent: 60px;
     --main-header-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header {
+    padding-block: 20px;
   }
 
   .header__epigraph {
     max-inline-size: 364px;
   }
 
+  .header__title {
+    position: relative;
+    inset-inline-start: -20px;
+  }
+
   .question-why,
   .question-how {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr var(--question-right-column);
   }
 
   .question-what .question__title {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr var(--question-right-column);
     gap: 20px;
   }
 
@@ -249,12 +267,13 @@
   :root {
     --main-header-font-size: 157px;
     --title-primary-shadow-color: #ff0070;
+    --question-right-column: 2.06fr;
   }
 
   .header__theme-menu {
     justify-self: center;
     align-self: start;
-    padding-block: 0px 273px;
+
   }
 
   .header__theme-menu-list {

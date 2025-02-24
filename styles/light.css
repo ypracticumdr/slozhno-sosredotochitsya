@@ -9,6 +9,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --background-color: #FFF1F7;
+  --theme-switch-hover: rgba(50, 49, 45, .4);
 }
 
 .theme_light {
@@ -39,6 +40,7 @@
     --title-content-color: #353430;
     --title-secondary-color: #353430;
     --main-text-color: #353430;
+    --theme-switch-hover: rgba(50, 49, 45, .4);
   }
 
   .theme_auto .header {
