@@ -10,6 +10,7 @@
   */
   --background-color: #FFF1F7;
   --theme-switch-hover: rgba(50, 49, 45, .4);
+  background-image: url("../images/cover-image-light.png");
 }
 
 .theme_light {
@@ -22,9 +23,7 @@
   --title-secondary-color: #353430;
   --main-text-color: #353430;
 }
-.theme_light .header {
-  background-image: url("../images/cover-image-light.png");
-}
+
 .theme_light .decorated-zon__rec-decoration {
   display: none;
 }
@@ -43,7 +42,7 @@
     --theme-switch-hover: rgba(50, 49, 45, .4);
   }
 
-  .theme_auto .header {
+  .page {
     background-image: url("../images/cover-image-light.png");
   }
 
