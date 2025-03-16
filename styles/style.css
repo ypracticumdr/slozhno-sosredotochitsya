@@ -50,18 +50,16 @@
 
 .decorated-zon__rec-decoration {
   position: absolute;
-  inset-inline-end: 0px;
+  inset-inline-end: 10px;
   text-transform: uppercase;
   color: #ff0070;
   line-height: 1.4em;
-  inset-block-start: 10px;
+  inset-block-start: var(--main-indent);
 }
 
 .decorated-zon__rec-decoration::after {
   content: "";
-  inline-size: 1.4em;
-  margin-inline-start: 7px;
-  margin-inline-end: 7px;
+  margin-inline-start: 10px;
   margin-block-end: 3px;
   block-size: 0.4em;
   inline-size: 0.4em;
